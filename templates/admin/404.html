@@ -1,0 +1,24 @@
+{% extends "admin/base_site.html" %}
+
+
+ {% block branding %}{% endblock %}
+
+{% load static %}
+
+{% block content %}
+    <div style="clear: both"></div>
+
+    <div id="thanks" class="container-content fr">
+
+        <div class="thanks-text">
+        <h2 style="color: #ffffff">Houston we have a problem.</h2>
+            <p style="font-size: 16px">A 404 was experienced, but we think you'll get over it.</p>
+        </div> <!-- end thanks-text div -->
+
+        <div class="errorimagebox">
+        <img class="fr" src="{% static "/admin/img/404.jpg" %}" width="300" height="169" alt="404 image">
+        </div> <!-- end error image div -->
+
+    </div> <!--end thanks div-->
+{% endblock content %}
+

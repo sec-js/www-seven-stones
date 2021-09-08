@@ -1,0 +1,117 @@
+{% extends "admin/base_site.html" %}
+
+
+ {% block branding %}{% endblock %}
+
+{% load static %}
+
+{% block content %}
+    <div style="clear: both"></div>
+
+    <div class="right-panel" id="secdeng">
+
+
+    <h1>Security De-engineering</h1>
+
+    <div style="height:30px">&nbsp;&nbsp;</div>
+
+    <div id="quotebox">
+            <p>"This book is probably the most thought-provoking book on security
+        I read in the last 5-7 years"</p>
+        <p>"it might be one of the most
+        influential books ever written in history of security industry - the one
+        that appeared at the best possible time when it's most needed"</p>
+        <p style="margin:0 0 0 25px;font-size:14px;padding:20px 0 0 0">- Dr Anton Chuvakin</p>
+            <br clear="all">
+    </div>
+
+    <div id="book">
+        <img src="{% static "admin/img/K13108-v2.jpg" %}" alt="Security De-engineering Cover" width="176" height="271"/>
+        <div style="clear: both"></div>
+        <div id="shares">
+             <div id="twitter" class="fr" style="margin-top:3px">
+                 <a href="https://twitter.com/share" class="twitter-share-button" data-via="Seven_Stones" data-count="none">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div> <!-- end twitter div -->
+
+            <div id="gr_add_to_books">
+            <div class="gr_custom_each_container_">
+              <a href="http://www.goodreads.com/book/isbn/1439868344" style="border:none" target="_blank"><img alt="Security De-engineering" src="http://www.goodreads.com/images/atmb_add_book-70x25.png" class="zero" /></a>
+            </div>
+          </div>
+          <!-- the identifier in the following script tag can be a GR book id or an isbn -->
+        </div> <!-- end shares div -->
+
+    </div><!--end book div -->
+
+
+
+    <p>My book <a href="http://www.amazon.com/Security-engineering-Problems-Information-Management/dp/1439868344">Security De-engineering</a> was recently published. Some details of the subject matter and a purchase link are <a href="http://www.crcpress.com/product/isbn/9781439868348?&af=w1184">here</a> (CRC Press's website).</p>
+        <div style="height: 20px">&nbsp;</div>
+        <h3>Preface</h3>
+	<p>Security De-engineering is for anyone with an interest in security, but the focus is on the aspects of security that matter to businesses, and how businesses do security.	    </p>
+	<p>It is clear that the good guys have been doing something wrong in security. There are increasing levels of fear and insecurity in the world as a result of almost daily news headlines relating to new acts of skullduggery by financially motivated bad guys. Large-scale incidents now regularly make headline news even in financial publications – this is because the bottom line is now being impacted. Smaller scale malware attacks gnaw at corporate balance sheets and lead to identity theft. These attacks have led to botnetz-r-us criminal gangs surpassing drug cartels in terms of revenue generation.	    </p>
+<p>One can be led to think the world is falling apart with so many credit card fraud horror stories and so on. But are we getting closer to a solution for corporate security? Not really, because we haven't yet identified the problems.
+    There is no secret that the security world and its customers are in something of a quagmire. All large organizations of more than 10000 nodes will have been the victims of Advanced Persistent Threat (APT) in some form or another. Indeed, most of them are already "owned". </p>
+	<p>In Security De-engineering I give a simple foundational remedy for our security ills, but in order to give a prescription, one must first make an accurate diagnosis of the ailment. In this respect, Security De-engineering is a definitive guide to the current problems in corporate information risk management. What are the problems? How and why were they manifested? How will they be addressed?
+	    </p>
+	<p>Security De-engineering is a unique take on the security world from several different aspects. I am not a manager or C-level exec, so my view on security is not from such an altitude that I cannot clearly see the ground. I have worked on three different continents and with close to 100 different Fortune 500s and multinationals – so my perspective is global and also crosses industry sectors. Lastly, my view is independent and objective. I have no affiliations with product vendors and no vested interests.
+	    </p>
+	<p>I started out in security in the late 90s and I witnessed some spectacular security failures in these early years. Then into the 2000s, the situation seemed to be getting worse. In the early 2000s I had seen some serious problems but I thought maybe I was just unlucky – I sort of hoped that these problems were only localized issues that I had the misfortune to stumble across. But as my career progressed, I came to realize that the problems I encountered were pandemic and global. As if I needed further assurance, I heard of similar stories from many others in the field.
+	    Some of the problems I speak of are becoming better known but they are not yet mainstream, then there are others that do not seem to be at all well known. I also cover the reasons why these problems have remained underground for more than a decade. In many cases it is because there is a vested interest in keeping these issues hidden.
+	    </p>
+	<p>At an Asia-pacific regional conference in 2002 the audience was told, "Security is no longer about people with green hair and facial piercings". Hackers were no longer welcome in the good guys' world and by 2002 there were very few remaining. At the time it was thought that information risk management programs would succeed - with or without IT skills. Time has proven this assumption to be incorrect.
+	    The root (no pun intended) cause of all of our problems can be summed up in terms of skills, or lack of, and unless we want to revert to the paper office, with filing cabinets and carrier pigeon, we had better do something about it! </p>
+	<p>The title of this narrative is a play on the title of Ross Anderson's famous book of the title "Security Engineering". Security started out bad, but rather than evolve, it got worse as a result of the removal of critical analysis skills - the security industry was effectively dumbed down, or de-engineered. From roughly the start of the 2000s onwards, there was a loss of intellectual capital from security that put firms on a collision course with fiends, and eroded the capacity of organizations to protect the confidentiality, integrity, and availability of their information assets.
+	    </p>
+	<p>After all the talk of doom and gloom, how about solutions? I agree with many in the field that there are some problems that we won't solve any time soon. Examples would be application security, employee awareness, and malware issues. But if an organization experiences an incident along these lines, does it have to lead to massive financial losses? There are plenty of things that organizations can do to reduce their risk. For example, there are technical means by which they can reduce their "attack surface", and increase the time needed for the bad guys to do them harm. The risk cannot be completely mitigated, but organizations can improve their security with "layers", so that they are no longer low hanging fruit.
+	    </p>
+	<p>If our problems have resulted from a loss of skills in security, then we need to somehow channel the right analysis skills back to the industry. How do we do this? Please read on…</p>
+	<p> A summary of the main chapters: </p>
+	<p><strong>Chapter One - Whom Do We Blame?</strong></p>
+<p>Who do we blame for all of these problems? Is it necessarily the C-level execs? Perhaps it is the case that the C-levels have never been well advised in security? C-levels make decisions based on available information, but if the information provided is not accurate, can they be blamed for making poor decisions?
+</p>
+<p><strong>Chapter Two – The Hackers</strong></p>
+<p>This is Hackers with an upper case 'H'. In this chapter I introduce the Hacker concept as in a set of skills. "Hacker" as a word conjures all different kinds of images, so I need to define what I mean by hacker for this narrative. Chapter Two is a look at the first generation of security pros and their skills. Much of this chapter is based on my own experiences of working with Hackers in the formative, late 90s years of my career.
+</p>
+<p><strong>Chapter Three – Checklists And Standards Evangelists (CASEs)</strong></p>
+<p>In Chapter Three I introduce the second genre of security professional - the CASE. Typical skill sets changed radically from the early 2000s onwards. The skills sets were reduced down to the level that was needed to deliver lower quality security offerings. The modern era security professional was effectively defined by the requirements of the modern era security department…and these requirements were very different from the late 90s. </p>
+<p>This chapter covers the practices of security departments in larger organizations.</p>
+<p><strong>Chapter Four – How Security Changed Post 2000</strong></p>
+<p>In Chapter Four I cover six detrimental post 2000s security changes and how these trends came about.
+    First I take a look at the common practice of devolving security functions to IT operations and the impact this has on the organization as a whole. </p>
+<p>Also in this chapter I cover the introduction of automation into security, the use of checklists as a substitute for analysis, the use and abuse of the phrase "best practices" in security, and finally I cover the all too common security strategy that is aimed at nothing more than base compliance.
+</p>
+<p><strong>Chapter Five – Automated Vulnerability Scanners</strong></p>
+<p>Automated vulnerability scanners are tools such as GFI LANguard, and "Nessus". This genre of tool is heavily used in the security industry and forms the basis of the majority of organizations' vulnerability management strategies. Some of the problems with autoscanners are starting to become more publicized but the extent of the failings remains hidden.
+    </p>
+<p>The security industry is just not ready for this level of automation. Other industries such as automobile manufacturing slowly phased in automation over a period of years, but even today there are still plenty of humans employed in automobile manufacturing. The security industry went full automatic at a very early stage in its formation – to the detriment of our economic security.
+    In Chapter Five I cover what goes on "under the hood" with these tools and rationalizes the differences between the perceived and the actual value returned with use of autoscanners.
+</p>
+<p><strong>Chapter Six – The Eternal Yawn: Careers In Information Security</strong></p>
+<p>The previous chapters should have served something of a warning for any prospective security professionals out there, but Chapter Six paints the vocational security picture in more vivid detail. Perhaps there are people out there who want to go get a CISSP and jump into the field (according to the exam pre-qualifiers one must have several years of vocational experience, but in practice even undergrads can be accredited as being Certified Information Systems Security Professionals). </p>
+<p>In Chapter Six I cover the security industry in the light of some of the more common drivers for pursuit of a career in security. </p>
+<p><strong>Chapter Seven – Penetration Testing - Old And New</strong></p>
+<p>At the time of writing most penetration testing projects are sold only on the basis of compliance (organizations need to show their perimeter defenses have been tested by an independent third party), but the increasing frequency of incidents may have led many security departments to re-think the value-offering of penetration testing.</p>
+<p>Older style penetration tests were unrestricted, and Hackers defined the methodology. As the 2000s dragged on, the network penetration testing scene changed a great deal, with a dramatic fall in the quality of the delivery.</p>
+<p>Penetration testing has been heavily restricted (with the result that it is no longer a simulated attack), and also delivered with more automation, but even if everything is perfect with the delivery methodology, what can we really expect to get from penetration testing, and how should we position it in our information risk management strategies? Chapter Seven gives an answer to some of the more pressing questions over the whole network penetration testing circus.</p>
+<p><strong>Chapter Eight – The Love Of Clouds And Incidents – The Vain Search For Validation</strong></p>
+<p>Many folk in security are inwardly reflective of their lives as CASEs, and conscious that the downward spiral of the industry has effectively led to their hands being tied in being able to offer anything of any value to their organizations. This has led to some unfortunate developments in the industry that end up wasting a lot of corporate resources, and further damaging the reputation of security departments.</p>
+<p>In Chapter Eight I first examine the common premise that in security we need a global incidents database in order to "prove" the existence of a threat (when there is some doubt expressed over risks, we can go to some database of collected data concerning past incidents and produce the "evidence") and therefore justify our own corporate right to exist. Do we really need such an entity in order to prove the existence of a threat, and even if we have a global incidents database, how much emphasis should we place on its contents?</p>
+<p>Secondly, I cover some aspects of cloud computing security and try to answer the questions: does this area deserve the extensive coverage it attracts or is moving to the cloud just a change in the network architecture? Is cloud security really a whole new ball game in security?</p>
+<p><strong>Chapter Nine – Intrusion Detection</strong></p>
+<p>Chapter's Nine and Ten cover security products, starting with the various different types of intrusion detection. What is our approximate return on investment with this technology? The value of detection is not in doubt, but does existing detection technology give us more of a headache than a solution?</p>
+<p><strong>Chapter Ten – Other Products</strong></p>
+<p>I first take a look at Security Incident Event Management (SIEM) solutions in Chapter Ten. Again, do we get the sort of return on investment that was promised by the vendor? Is SIEM really such a technological breakthrough? Does a SIEM solution give us a turn-key answer to our incident response issues or is it a small (but very expensive) piece of the puzzle?</p>
+<p>Identity management (IdM) was another modern development in security. Vendors will have us believe that we cannot manage identities unless we invest in a huge, complex software package of the IdM variety. But Identity management solutions need some thought. We cannot just buy a product and hope to solve all of our problems in managing complex user account environments. </p>
+<p>There will be many cases where IdM products do not really do that much for us. There are very few, if any cases where IdM can give us centralized user management for all applications and services. If we break up the enterprise into smaller "pieces" such as Unix, Web applications, Windows and so on, and actually think about what we are trying to achieve…we may find that our pre-IdM architecture had everything we ever needed.</p>
+<p><strong>Chapter Eleven – One Professional Accreditation Program To Bind Them All</strong></p>
+<p>Justice cannot be done to the area of solutions in this narrative because a micro-detailed view is needed of the different issues we face. Such topics have a fairly extensive real estate pre-requisite, but in writing this book I did feel a need to avoid talking purely about problems and taking Security De-engineering down the road of a being a Book Of Revelations for the electronically connected world. </p>
+<p>In Chapter Eleven I give a simplified view of how I think we might channel the necessary skills back into security – and with the re-introduction of properly managed security artists ("properly managed" is the key here, the late 90s Hackers were properly skilled but not properly managed), it is hoped that all issues may at least be reviewed within an improved framework.</p>
+<div style="height: 30px">&nbsp;</div>
+
+
+    </div><!-- end right panel div -->
+
+{% endblock content %}
+

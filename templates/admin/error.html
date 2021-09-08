@@ -1,0 +1,22 @@
+{% extends "admin/base_site.html" %}
+
+
+ {% block branding %}{% endblock %}
+
+{% load static %}
+
+{% block content %}
+    <div style="clear: both"></div>
+
+    <div id="thanks" class="container-content fr">
+
+        <div id="thanks-text">
+        <h2 style="color: #ffffff">Houston we have a problem.</h2>
+            <p style="font-size: 16px">We have been notified and will be in touch shortly.</p>
+        </div> <!-- end thanks-text div -->
+
+        <img class="fr" width="220" height="146" src="{% static "/admin/img/sorry.jpg" %}">
+
+    </div> <!--end thanks div-->
+{% endblock content %}
+

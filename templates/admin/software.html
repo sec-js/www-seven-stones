@@ -1,0 +1,123 @@
+{% extends "admin/base_site.html" %}
+
+
+ {% block branding %}{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+
+    <div class="right-panel">
+    <div style="border-top:thin #5a6268 solid; height: 10px"></div>
+    <h2>Software</h2>
+
+    <div class="container-content" id="netdelta">
+        <div class="header-branding">
+            <img src="{% static "admin/img/netdelta-logo.svg" %}" class="fl" height="60" width="60" style="margin-right: 10px">
+            <p class="fl" style="font-size:inherit; padding-top:15px; margin:0">Netdelta</p>
+        </div> <!-- end header branding div -->
+        <div style="clear: both; height: 20px"></div>
+        <h4 style="color: #ffffff">Detect perimeter changes before hackers detect them!</h4>
+        <p></p>
+        <p>If your network perimeter changes unexpectedly, that's unlikely to be a good thing. What is the cause?</p>
+       <ul>
+           <li>Unauthorised change?</li>
+           <li>Steve in networking misconfigured a firewall?</li>
+           <li>Hacker's shell?</li>
+           <li>Shadow IT?</li>
+           <li>Rogue device?</li>
+           <li>Post-M&A networking headaches?</li>
+       </ul>
+        <p><a href="https://www.netdelta.io">More details...</a></p>
+    </div> <!-- end container div -->
+
+        <div style='clear:both;height:30px'></div>
+        <div class="container-content" id="musang">
+
+            <div class="header-branding" style="width: 270px">
+            <img class="fl" height="85" src="{% static "admin/img/musang-tranparent.png" %}"
+                 style="margin-right:10px" width="140">
+            <p class="fl" style="font-size:inherit; padding-top:15px; margin:0">Musang</p>
+            </div> <!-- end header branding div -->
+        <div style="clear:both; height: 30px"></div>
+        <p>Musang is a software tool for automatically assessing the security of Oracle Databases.    </p>
+        <p>Musang's design ensures:</p>
+        <ul>
+          <li><span class="white">Accuracy</span>:
+          The testing module has full and clear visibility of database configuration.</li>
+
+          <li><span class="white">Efficiency</span>:
+          Configuration is easy, and reports are concise, focusing on the critical aspects.</li>
+
+          <li><span class="white">Designed AND IMPLEMENTED by Subject Matter Experts</span>:
+          Unlike so many other security software packages, Musang was not only conceived by Security experts, it was also fully designed and implemented by Oracle Database security subject matter experts, with 10 years of experience behind them. </li>
+
+          <li><span class="white">Speed</span>:
+          The bottleneck is more likely to be network bandwidth rather than processing time.</li>
+
+          <li><span class="white">Compliance Testing</span>:
+
+          Tests covered ensure most popular audit concerns are covered - HIPPA, PCI-DSS, ISO 27001, etc</li>
+        </ul>
+
+
+        <p>Musang interrogates Oracle Databases in a fast and accurate way.
+            There are many Oracle Database vulnerabilities known to the security community that arise from
+            misconfigurations and DBA oversights. Musang tests for these vulnerabilities in a unique way
+            that permits accuracy and efficiency.    </p>
+        <div style="height:30px"></div>
+        <h4 class="white">Partial Screen Shots</h4>
+        <p></p>
+            <p></p>
+        <table>
+          <tr>
+          <td>Musang login</td>
+            <td>Test progress</td>
+
+            <td>Test report</td>
+          </tr>
+          <tr>
+            <td><a href="{% static "admin/img/musang-screens/musang-login-full.jpg" %}" target="_blank">
+                <img src="{% static "admin/img/musang-screens/musang-login-thumb.jpg" %}" width="200" height="175" alt="setup"></a></td>
+            <td><a href="{% static "admin/img/musang-screens/scan-progress-full.jpg" %}" target="new">
+                <img src="{% static "admin/img//musang-screens/scan-progress-thumb.jpg" %}" width="200" height="175" alt="scan progress"></a></td>
+            <td><a href="{% static "admin/img/musang-screens/scan-report-full.jpg" %}" target="_blank">
+                <img src="{% static "admin/img/musang-screens/scan-report-thumb.jpg" %}" width="200" height="175" alt="report"></a></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+
+        <h3>How Does Musang Work?</h3>
+        <p>Musang relies on authenticated methods to test vulnerability and the authenticated part is the most critical aspect. Being authenticated, having effectively read-only DBA access, means Musang can &quot;see&quot; clearly all aspects of database configuration. And this also means radically fewer false positives. In most cases there will be no false positives at all. </p>
+        <p>The authenticated nature of the testing plus the contextual testing (see next section) implemented by Oracle Database security experts ensures radically fewer false positives compared with unauthenticated, &quot;blind&quot; scanners.</p>
+        <h4 class="white">Contextual Testing</h4>
+        <p>Unlike other scanners, Musang takes into account the effect that different server settings can have on each other. For example: weak passwords by themselves constitutes a vulnerability, but what if the accounts are lock or expired? In this case a vulnerability is not flagged by Musang, however both items of configuration are itemised as &quot;Informational&quot; by the testing engine.</p>
+        <h4 class="white">False Positives</h4>
+        <p>False positives are bad for business. They're bad for the information security practice in a business, and they're consequently bad for operations, application developers, and management. They're a time and resources sink hole. </p>
+        <p><strong>The worst aspect of false positives is the effect they have on trust</strong>. Security Managers and Analysts want to be able to trust their tools to automatically find vulnerability. If there is no trust, it makes integration with other departments very tough. Security Managers need to have confidence when they report on the progress of their vulnerability management programs.</p>
+        <p>With Musang - the lack of false positives and accurate output <em><strong>finally allows confidence in the automation of vulnerability assessment.</strong></em><br />
+        </p>
+        <h4 class="white">Features</h4>
+        <p>Musang is a Python/<a href="https://www.djangoproject.com/">Django</a> web-based project currently at version 1.4.</p>
+        <p>Currently Oracle Database 12c, 11g and 10g are supported targets.</p>
+        <p>The tests library has been compiled based on the requirements of most businesses' Security Standards for Oracle Database. There are several public sources of Oracle Database security configuration items (e.g. the CIS Benchmarks) and these tests are all included as well as some important tests included by the development team based on their experiences in security testing and security incidents. In summary: no stone has been left unturned.</p>
+        <p>As a high level description, the following tests are covered:</p>
+        <ul>
+          <li>User account profile tests</li>
+          <li>Informational config dumps: these are not vulnerability tests per say, they give DBAs/devs information which may well be of interest from a security perspective. The information that is dumped may well reveal further vulnerabilities on investigation, or it might just typically be of interest for DBAs, developers, or Security experts</li>
+          <li>TNS listener poisoning</li>
+          <li>Auditing and logging configuration tests</li>
+          <li>Passwords (password hashes are viewable for users in a username:password format, suitable for crackers such as JTR, Hashcat, etc)</li>
+          <li>Obvious weak and default passwords</li>
+          <li>Other TNS listener critical tests</li>
+          <li>User account authentication settings</li>
+          <li>Roles and privileges (the full dump of privileges is made available with some suspect items highlighted)</li>
+          <li>User account trust relationships are investigated</li>
+          <li>Database links are identified (and highlighted) and tested</li>
+        </ul>
+                <div style="height:20px"></div>
+        </div> <!-- end container div -->
+            <div style="height:30px"></div>
+    </div> <!-- end right panel div -->
+{% endblock content %}

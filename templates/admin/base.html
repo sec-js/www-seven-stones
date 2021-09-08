@@ -1,0 +1,192 @@
+{% load i18n static %}<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+<title>{% block title %}Seven Stones Information Security{% endblock %}</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="" name="description" />
+    <meta name="Revisit-After" content="7 days" />
+    <meta name="keywords" content="information security, software, penetration testing, security architecture, vulnerability assessment" />
+    <meta name="robots" content="index, follow, all" />
+    <meta name="Author" content="Ian Tibble" />
+
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="{% static "admin/assets/css/stones.css" %}" rel="stylesheet" />
+
+    {% block extrastyle %}{{ block.super }}{% endblock %}
+
+  <!-- ================== END BASE CSS STYLE ================== -->
+
+
+
+    {#====================favicon=======================#}
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static "admin/img/favicon/apple-icon-57x57.png" %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static "admin/img/favicon/apple-icon-60x60.png" %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static "admin/img/favicon/apple-icon-72x72.png" %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static "admin/img/favicon/apple-icon-76x76.png" %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static "admin/img/favicon/apple-icon-114x114.png" %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static "admin/img/favicon/apple-icon-120x120.png" %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static "admin/img/favicon/apple-icon-144x144.png" %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static "admin/img/favicon/apple-icon-152x152.png" %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "admin/img/favicon/apple-icon-180x180.png" %}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static "admin/img/favicon/android-icon-192x192.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "admin/img/favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static "admin/img/favicon/favicon-96x96.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "admin/img/favicon/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "admin/img/favicon/manifest.json" %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static "admin/img/favicon/ms-icon-144x144.png" %}">
+    <meta name="theme-color" content="#ffffff">
+
+    {#===================end favicon=======================#}
+
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="{% static "admin/assets/plugins/pace/pace.min.js" %}"></script>
+  <!-- ================== END BASE JS ================== -->
+    <style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    input {
+        border: 2px solid #ccd0d4;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        font-size: 12px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+    }
+
+    textarea {
+        border: 2px solid #ccd0d4;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        font-size: 12px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+    }
+
+    .display-3 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    }
+
+    .text-xs-center {
+    text-align: center!important;
+    }
+
+
+    .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    }
+
+    </style>
+</head>
+<body>
+    {% load static %}
+    <!-- begin #page-container -->
+    <div id="page-container">
+    {% block header %}
+                <!-- begin #header -->
+        <div id="header">
+            <!-- begin container -->
+            <div class="container">
+                <!-- begin navbar-header -->
+                <div id="navbar-header">
+
+                    <img src="{% static "admin/img/seven-stones-logo-2019.png" %}" style="float:left">
+                        <span class="brand-text"></span>
+                </div>
+                <!-- end navbar-header -->
+                <!-- begin navbar-collapse -->
+                <div id="header-navbar">
+                    <ul>
+                        <li><a href="/" data-click="scroll-to-target">HOME</a></li>
+                        <li><a href="/services#profile" data-click="scroll-to-target">PROFILE</a></li>
+                        <li><a href="/services" data-click="scroll-to-target">SERVICES</a></li>
+                        <li><a href="/software" data-click="scroll-to-target">SOFTWARE</a></li>
+                        <li><a href="/blog">BLOG</a></li>
+                        <li><a href="/#contact" data-click="scroll-to-target">CONTACT</a></li>
+                    </ul>
+                </div>
+                <!-- end navbar-collapse -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #header -->
+    {% endblock header %}
+    <div id="main-content">
+    {% block content %}{% endblock content %}
+    {% block leftpanel %}
+        <div id="left-panel">
+
+        <div class="CAVS-index">
+
+            <h3>Security Macromorphosis</h3>
+            <h4><img src="{% static "admin/img/sacred-cows.jpg" %}" width="240" height="66" alt="Sacred Cows" /></h4>
+            <h4>Latest Blog Post</h4>
+            <p>&nbsp;</p>
+            <h4 style="color:#ffffff">{{ blog_post_dict.title }}</h4>
+            <p>{{ blog_post_dict.post_date }}</p>
+            <p>&nbsp;</p>
+            {{ blog_post_dict.excerpt | safe }}
+            <p><a href="/blog">Read on ...</a></p>
+        </div>
+
+        <div class="CAVS-index">
+            <h3>Publication</h3>
+            <img src="{% static "admin/img/K13108-v2.jpg" %}" alt="Security DeEngineering" width="89" height="135" class="ri">
+            <h4><a href="/security_de_engineering">Security<br>
+            De-engineering</a></h4>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="/security_de_engineering">Security De-engineering</a>, published by Taylor Francis, covers ubiquitous problems in information security and offers a solution in the final chapter</p>
+
+            <p>Areas covered: Penetration testing, Hackers, CASEs (Checklists and Standards Evangelists), IDS, Cloud Security, jobs in security, Identity Management, and organisational elements.</p>
+            <p>&nbsp;</p>
+        </div>
+
+        <div class="CAVS-index">
+            <h3>Partners</h3>
+            <div style="height:20px"></div>
+            <img src="{% static "admin/img/lc.png" %}" alt="Literatecode" class="ri"/>
+            <h4><a href="http://www.literatecode.com/">Literatecode</a></h4>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="http://www.literatecode.com/">Literatecode</a> was established in 2003 as an informal R&D lab and reorganized to a registered business in 2012.</p>
+
+            <p><a href="http://www.literatecode.com/">Literatecode</a> specializes in applied research and experimental development to help companies and individuals defend themselves against security threats.</p>
+
+
+        </div>
+    </div><!--end leftpanel div-->
+    {% endblock leftpanel %}
+
+        <div style='clear:both'></div>
+    </div> <!-- end main-content div -->
+
+
+{% block footing  %}
+            <!-- begin #footer -->
+
+
+<div id="footer">
+
+        <p class="fl zero" style="padding-top:9px">
+            &copy; Copyright 2021 - Seven Stones Information Security
+        </p>
+        <div class="fl zero" style="margin: 0 0 0 250px">
+            <a href="https://twitter.com/Seven_Stones"><img src="{% static "admin/img/twitter-logo.svg" %}"
+                                                            alt="Twitter" height="35" width="35"></a>
+        </div>
+        <div class="fr zero" style="margin-right: 20px; padding-top: 7px"><a href="/privacy">Privacy Policy</a></div>
+
+</div>
+<!-- end #footer -->
+
+{% endblock footing %}
+</body>
+</html>

@@ -1,0 +1,119 @@
+{% extends "admin/base_site.html" %}
+
+
+ {% block branding %}{% endblock %}
+
+{% load static %}
+
+{% block content %}
+    <div style="clear: both"></div>
+
+ <div class="right-panel">
+
+        <div class="services">
+            <div style="border-top:thin #5a6268 solid; height: 10px"></div>
+            <h2>Consulting Services</h2>
+            <div style="height: 30px"></div>
+            <h1>BACK TO BASICS</h1>
+            <p></p><p></p><p></p><p></p>
+                <h2>Architecture as a Service, or vArchitect</h2>
+                <ul>
+                    <li>We keep it simple - What is the problem we are trying to solve? And how are we going to solve it?
+                    Designs should never be full of theory. If the justifications for design decisions are important,
+                    they can be included in an appendix.</li>
+                    <li>SABSA based design without the endless theory of SABSA.</li>
+                    <li>Security capabilities covered: Threat and Vulnerability Management, SIEM, Trust (firewalls, trust
+                    boundary controls), Business Resilience Management (BRM), Identity Management, and Cryptography
+                    and Key Management (CKM).</li>
+                </ul>
+                <h2>Security Services for Small/Medium Businesses (SMBs)</h2>
+                <ul>
+                    <li>Simple, low foot-print, and cheap.</li>
+                    <li>To help SMBs requires strong foundational (IT experience + attack mindset) skills in infosec,
+                    a gift which very few in this sector possess. Large organisations can spend more than SMBs, and
+                    also can afford to not see any benefit from their investment in infosec. Poor security advice can co-exist
+                        with business almost seamlessly.
+                        SMBs however - it's a different story.</li>
+                    <li>Max of one permanent security resource is required - not a team of Big 3 consultants at £1800/day.</li>
+                    <li>A typical engagement - half day workshop to understand the environment and challenges. If is deemed
+                    useful to proceed, then a short (a few days) architecture engagement at market rates, and then there may
+                    be some engineering days, also at market rates.</li>
+                    <li>Six security capabilities are assessed, depending on the network size: Vulnerability Management,
+                    Logging, Crypto and Key Management, Business Resilience, Trust, and Identity Management.</li>
+                    <li>It is likely an economy of scales model could be proposed based on usage of a trustworthy and highly
+                    skilled Managed Service Provider.</li>
+                </ul>
+                <h2>Cloud Migration - Engineering and Architecture</h2>
+                <ul>
+                    <li>Architecture - see above.</li>
+                    <li>Engineering - TVM, SIEM, IDAM.</li>
+                    <li>Platforms: AWS, Google Cloud Platform, Azure.</li>
+                    <li>Integration of security capabilities with existing devops processes and technologies.</li>
+                </ul>
+                <h2>Penetration Testing</h2>
+                <ul>
+                    <li>See <a href="/pentest-profile">profile</a></li>
+                    <li>Vulnerability Assessment - VA++.</li>
+                    <li>SAST support - initation of fix integration in to CI/CD.</li>
+                    <li>DAST - "Blind" OWASP testing.</li>
+                </ul>
+                <h2>SIEM</h2>
+                <ul>
+                    <li>Splunk, Alienvault, open source architectures with Rsyslog.</li>
+                    <li>Splunk "clean-up" - assistance with excessive logging scenarios.</li>
+                    <li>We only work with clients who are interested in development of use cases for the purpose of
+                        alerting - i.e. seeing some benefit for their investment.</li>
+                    <li>Strategic and tactical Development of Security Operations functions, and incident response.</li>
+                </ul>
+                <h2>Threat and Vulnerability Management</h2>
+                <ul>
+                    <li>Infrastructure Penetration Testing.</li>
+                    <li>Application Security - "blind" OWASP testing.</li>
+                    <li>Designing capabilities for TVM - people, process, and technology - how does the organisation respond
+                    to an identified vulnerability?</li>
+                </ul>
+                <h2>Oracle Database Security Health Check</h2>
+                <ul>
+                    <li>10g, 11g, 12c.</li>
+                    <li>Automated scanning using <a href="/software">Musang</a>.</li>
+                    <li>Follow up on vulnerability assessment with remediation advice.</li>
+                </ul>
+                <h2>Software Development</h2>
+                <ul>
+                    <li>Splunk apps.</li>
+                    <li>Python, Django, BASH, Ruby.</li>
+                    <li>Types of engagement:</li>
+                    <ul>
+                        <li>Bridging gaps between product functionality and required functionality.</li>
+                        <li>Development of scripts for automation.</li>
+                        <li>Debugging existing automation.</li>
+                    </ul>
+                </ul>
+            <div style="height: 30px"></div>
+        </div> <!-- end services div -->
+
+     <div id="profile" class="services">
+            <div style="border-top:thin #5a6268 solid; height: 10px"></div>
+            <h2>Profile</h2>
+
+            <p>Ian Tibble graduated from City University (London) in 1991 with a BEng in Computer Systems Engineering,
+            and then went overseas in Oil & Gas exploration ("Seismic") in Algeria, Turkey, Yemen (twice), and UAE, with
+                an accidental crossing into Libya in the deep south of the Sahara.</p>
+         <p>Ian then used his degree to get into IT at the age of 25, with first Sun Microsystems, then IBM Global Services.</p>
+         <p>In 1998 Ian joined Trusecure's testing and research lab in Asia Pacific (now Verizon Business),
+             serving clients in banking and telcos, in Thailand,
+         Malaysia, Indonesia, Hong Kong, Taiwan, and Australia. These first 5 years in red team/unrestricted penetration testing
+         laid the foundation for Ian's career and gave him an attack mindset, to be followed by 2 years in DHL's ITSC in Prague,
+         where "the other side of the fence" (defence) was the priority.</p>
+         <p>After a spell with PwC, the next 8 years up to 2015 saw Ian engaged in multiple sectors: Insurance, Telecommunications, Legal,
+             Banking, and Trading (London Stock Exchange Group).
+         </p>
+         <p>
+             More recently (since 2015) Ian has been engaged as a architectural/engineering resource on cloud migration and devops projects for HSBC and
+             HM Government (multiple departments).
+         </p>
+            <div style="height: 30px"></div>
+     </div> <!-- end services div -->
+ </div> <!-- end right-panel div -->
+
+{% endblock content %}

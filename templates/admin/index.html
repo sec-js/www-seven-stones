@@ -1,0 +1,93 @@
+{% extends "admin/base_site.html" %}
+
+
+ {% block branding %}{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <div class="right-panel">
+
+        <div class="services">
+            <div style="border-top:thin #5a6268 solid; height: 10px"></div>
+            <h2>Consulting Services</h2>
+            <div style="height: 30px"></div>
+            <h1>BACK TO BASICS</h1> in security means:
+                <ul>
+                    <li>Cheaper - most "advanced", "intelligent", "heuristic", "visionary", or "next gen" offerings are
+                        very expensive burnt offerings. The illuminaries behind such ventures know that their offering is of
+                        poor quality or doesn't deliver in line with the price tag, but they don't care. They paid off the VC
+                        and then some, and can now be found on a beach somewhere nice.</li>
+                    <li><strong>We seek to help clients who are interested in saving money</strong> and also sleeping better at night.
+                    There's plenty of consultancies who will help use your security budget (therein help to get a higher budget in the next
+                    financial year), if cheaper is not what you seek.</li>
+                    <li>Recent high profile incidents, such as <a href="https://en.wikipedia.org/wiki/WannaCry_ransomware_attack">Wannacry</a>,
+                        are defeatable with back-to-basics tech from 1995.
+                    You probably already have the means to manage risks from ransomware and other such threats.</li>
+                    <li>Of course not all new concepts are duds. Some are worth resource investment, and we will help you with those.</li>
+                </ul>
+            <p>Check our <a href="/services">service offerings</a> and <a href="/services#profile">profile</a>.</p>
+
+        </div> <!-- end services div -->
+
+    <div style='clear:both'></div>
+        <div id="software">
+            <div style="border-top:thin #5a6268 solid; height: 10px"></div>
+            <h2>Software</h2>
+            <div class="container-content fl" style="width:45%">
+                <div class="header-branding">
+                    <img src="{% static "admin/img/netdelta-logo.svg" %}" class="fl" height="60" width="60" style="margin-right: 10px">
+                    <p class="fl" style="font-size:inherit; padding-top:15px; margin:0">Netdelta</p>
+                </div> <!-- end header branding div -->
+                <div style="clear: both; height: 20px"></div>
+                <h4 style="color: #ffffff">Detect perimeter changes before hackers detect them!</h4>
+                <p></p>
+                <p>If your network perimeter changes unexpectedly, that's unlikely to be a good thing. What is the cause?</p>
+               <ul>
+                   <li>Unauthorised change?</li>
+                   <li>Steve in networking misconfigured a firewall?</li>
+                   <li>Hacker's shell?</li>
+                   <li>Shadow IT?</li>
+                   <li>Rogue device?</li>
+                   <li>Post-M&A networking headaches?</li>
+               </ul>
+                <p><a href="https://www.netdelta.io">More details...</a></p>
+            </div>
+            <div class="container-content fr" style="width:45%">
+                <div class="header-branding">
+                    <img class="fl" height="85" src="{% static "admin/img/musang-tranparent.png" %}"
+                         style="margin-right:10px; margin-left: -75px" width="140">
+                    <p class="fl" style="font-size:inherit; padding-top:15px; margin:0">Musang</p>
+                </div> <!-- end header branding div -->
+                <div style="clear: both; height:20px"></div>
+                <h4 style="color: #ffffff">Oracle Database Security Assessment</h4>
+                <p></p>
+                <p>Authenticated vulnerability scanning for auditing, with a tests library based on 20 years of Oracle Database Security assessment.</p>
+                <ul>
+                    <li>Oracle Database versions 10g, 11g, and 12c are supported.</li>
+                    <li>Vulnerability assessment - covering usual compliance requirements for PCI-DSS, HIPAA, etc.</li>
+                    <li>Covers TNS listener, auditing, passwords, user accounts and privileges, typical default security issues, and many more.</li>
+                </ul>
+                <p><a href="/software#musang">More details...</a></p>
+            </div>
+        </div>
+        <div style='clear:both;height:30px'></div>
+        <div name="contact" id="contact">
+            <div style="border-top:thin #5a6268 solid; height: 10px"></div>
+            <h2>Contact Us</h2>
+            <div class="container-content fl" style="width:450px">
+            <form id="contact_form" method="post">{% csrf_token %}
+            <table class="gfg">
+                <tr class="row"><td class="first">Name <span class="required">*</span></td><td>{{ form.name }}</td></tr>
+                <tr><td class="first">Email <span class="required">*</span></td><td>{{ form.email }}</td></tr>
+                <tr><td class="first">Message <span class="required">*</span></td><td>{{ form.message }}</td></tr>
+                <tr><td></td><td><input class="button centre" style="width:345px" type="submit" value="Send Message"></td></tr>
+            </table>
+            </form>
+            </div>
+        </div> <!-- end contact div -->
+    <div style='clear:both;height:30px'></div>
+    </div><!--end right-panel div-->
+
+
+
+{% endblock content %}

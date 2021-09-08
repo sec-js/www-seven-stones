@@ -1,0 +1,8 @@
+Sitemap: /sitemap.xml
+User-agent: *
+Disallow: /wp-admin
+Disallow: /wp-includes/
+Disallow: /feed/
+Disallow: /trackback/
+Disallow: /cgi-bin/
+Disallow: /wp-content/plugins/seo-automatic-seo-tools/

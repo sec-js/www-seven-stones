@@ -1,0 +1,414 @@
+/home/iantibble/jango/sevenstones/sevenstones/urls.py changed, reloading.
+Internal Server Error: /service-definition
+Traceback (most recent call last):
+  File "/home/iantibble/jango/stones/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/iantibble/jango/stones/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/iantibble/jango/stones/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iantibble/jango/sevenstones/www/views.py", line 62, in service_definition
+    html = render(request, 'admin/service-definition.html.html', context)
+  File "/home/iantibble/jango/stones/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/iantibble/jango/stones/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/iantibble/jango/stones/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: admin/service-definition.html.html
+Not Found: /favicon.ico
+/home/iantibble/jango/sevenstones/www/views.py changed, reloading.
+Not Found: /blog
+/home/iantibble/jango/sevenstones/sevenstones/urls.py changed, reloading.
+/home/iantibble/jango/sevenstones/www/views.py changed, reloading.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/iantibble/PycharmProjects/sevenstones/www/views.py", line 17, in index
+    blog_post_dict = blog_text_grab()
+  File "/Users/iantibble/PycharmProjects/sevenstones/www/blog_grab.py", line 11, in blog_text_grab
+    con = pymysql.connect('localhost', 'root', os.getenv("pDB"), 'wordpress')
+TypeError: __init__() takes 1 positional argument but 5 were given
+Not Found: /favicon.ico
+/Users/iantibble/PycharmProjects/sevenstones/www/blog_grab.py changed, reloading.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/iantibble/PycharmProjects/sevenstones/www/views.py", line 17, in index
+    blog_post_dict = blog_text_grab()
+  File "/Users/iantibble/PycharmProjects/sevenstones/www/blog_grab.py", line 11, in blog_text_grab
+    con = pymysql.connect('localhost', 'root', p, 'wordpress')
+TypeError: __init__() takes 1 positional argument but 5 were given
+/Users/iantibble/PycharmProjects/sevenstones/sevenstones/settings.py changed, reloading.
+/Users/iantibble/PycharmProjects/sevenstones/sevenstones/settings.py changed, reloading.
+/Users/iantibble/PycharmProjects/sevenstones/www/blog_grab.py changed, reloading.
+/Users/iantibble/PycharmProjects/sevenstones/www/blog_grab.py changed, reloading.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 1034, in find_library
+    return parser.libraries[name]
+KeyError: 'staticfiles'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/iantibble/PycharmProjects/sevenstones/www/views.py", line 47, in index
+    html = render(request, 'admin/index.html', context)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 278, in do_extends
+    nodelist = parser.parse()
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 216, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 1091, in load
+    lib = find_library(parser, name)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 1036, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'staticfiles' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+Not Found: /favicon.ico
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 1034, in find_library
+    return parser.libraries[name]
+KeyError: 'staticfiles'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/iantibble/PycharmProjects/sevenstones/www/views.py", line 47, in index
+    html = render(request, 'admin/index.html', context)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 278, in do_extends
+    nodelist = parser.parse()
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 216, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 1091, in load
+    lib = find_library(parser, name)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 1036, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'staticfiles' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+/Users/iantibble/PycharmProjects/sevenstones/templates/admin changed, reloading.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 1034, in find_library
+    return parser.libraries[name]
+KeyError: 'admin_static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/iantibble/PycharmProjects/sevenstones/www/views.py", line 47, in index
+    html = render(request, 'admin/index.html', context)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 103, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 1091, in load
+    lib = find_library(parser, name)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 1036, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'admin_static' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+/Users/iantibble/PycharmProjects/sevenstones/templates/admin changed, reloading.
+/Users/iantibble/PycharmProjects/sevenstones/sevenstones/settings.py changed, reloading.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/iantibble/PycharmProjects/sevenstones/www/mailer.py", line 20, in contactmailnotify
+    smtpObj = smtplib.SMTP('localhost')
+  File "/usr/local/Cellar/python@3.9/3.9.4/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python@3.9/3.9.4/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python@3.9/3.9.4/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/usr/local/Cellar/python@3.9/3.9.4/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 843, in create_connection
+    raise err
+  File "/usr/local/Cellar/python@3.9/3.9.4/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 831, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/iantibble/PycharmProjects/sevenstones/www/views.py", line 33, in index
+    x = contactmailnotify(u)
+  File "/Users/iantibble/PycharmProjects/sevenstones/www/mailer.py", line 29, in contactmailnotify
+    app_logger.critical("Error: ConnectionRefusedError - unable to send notification email, contact form mail received from {0}}"
+ValueError: Single '}' encountered in format string
+/Users/iantibble/PycharmProjects/sevenstones/www/mailer.py changed, reloading.
+{
+  "contact": {
+    "name": "Ian Tibble",
+    "email": "itibble@gmail.com",
+    "message": "test",
+    "ip": "127.0.0.1"
+  },
+  "event": "Error: ConnectionRefusedError - unable to send notification email, contact form mail received from itibble@gmail.com",
+  "level": "critical",
+  "file_name": "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/structlog/_log_levels.py",
+  "line_number": 118,
+  "function_name": "meth",
+  "timestamp": "datetime.datetime(2021, 4, 27, 14, 44, 2, 301425, tzinfo=<UTC>)"
+}
+{
+  "contact": {
+    "name": "Ian Tibble",
+    "email": "itibble@gmail.com",
+    "message": "test",
+    "ip": "127.0.0.1"
+  },
+  "event": "Error: ConnectionRefusedError - unable to send notification email, contact form mail received from itibble@gmail.com",
+  "level": "critical",
+  "file_name": "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/structlog/_log_levels.py",
+  "line_number": 118,
+  "function_name": "meth",
+  "timestamp": "datetime.datetime(2021, 4, 27, 14, 44, 23, 209119, tzinfo=<UTC>)"
+}
+/Users/iantibble/PycharmProjects/sevenstones/www/mailer.py changed, reloading.
+{
+  "contact": {
+    "name": "Ian Tibble",
+    "email": "itibble@gmail.com",
+    "message": "test",
+    "ip": "127.0.0.1"
+  },
+  "event": "Error: ConnectionRefusedError - unable to send notification email, contact form mail received from itibble@gmail.comwith error [Errno 61] Connection refused",
+  "level": "critical",
+  "file_name": "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/structlog/_log_levels.py",
+  "line_number": 118,
+  "function_name": "meth",
+  "timestamp": "datetime.datetime(2021, 4, 27, 14, 50, 35, 161075, tzinfo=<UTC>)"
+}
+Not Found: /blog
+/Users/iantibble/PycharmProjects/sevenstones/www/mailer.py changed, reloading.
+{
+  "contact": {
+    "name": "Ian Tibble",
+    "email": "itibble@gmail.com",
+    "message": "test",
+    "ip": "127.0.0.1"
+  },
+  "event": "Error: unable to send notification email, contact form mail received from itibble@gmail.com, with error (530, b'5.7.0 Must issue a STARTTLS command first. v4sm389838wme.14 - gsmtp', 'info@netdelta.io')",
+  "level": "critical",
+  "file_name": "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/structlog/_log_levels.py",
+  "line_number": 118,
+  "function_name": "meth",
+  "timestamp": "datetime.datetime(2021, 4, 27, 15, 43, 36, 175520, tzinfo=<UTC>)"
+}
+/Users/iantibble/PycharmProjects/sevenstones/www/mailer.py changed, reloading.
+{
+  "contact": {
+    "name": "Ian Tibble",
+    "email": "itibble@gmail.com",
+    "message": "test",
+    "ip": "127.0.0.1"
+  },
+  "event": "Error: unable to send notification email, contact form mail received from itibble@gmail.com, with error (530, b'5.7.0 Must issue a STARTTLS command first. l21sm3755086wme.10 - gsmtp', 'netdelta@netdelta.io')",
+  "level": "critical",
+  "file_name": "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/structlog/_log_levels.py",
+  "line_number": 118,
+  "function_name": "meth",
+  "timestamp": "datetime.datetime(2021, 4, 27, 15, 45, 0, 798907, tzinfo=<UTC>)"
+}
+/Users/iantibble/PycharmProjects/sevenstones/www/mailer.py changed, reloading.
+{
+  "contact": {
+    "name": "Ian",
+    "email": "itibble@gmail.com",
+    "message": "test test",
+    "ip": "127.0.0.1"
+  },
+  "event": "Successfully sent notification email, contact form mail received",
+  "level": "info",
+  "file_name": "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/structlog/_log_levels.py",
+  "line_number": 118,
+  "function_name": "meth",
+  "timestamp": "datetime.datetime(2021, 4, 27, 15, 49, 19, 256275, tzinfo=<UTC>)"
+}
+/Users/iantibble/PycharmProjects/sevenstones/www/views.py changed, reloading.
+/Users/iantibble/PycharmProjects/sevenstones/sevenstones/wsgi.py changed, reloading.
+/Users/iantibble/PycharmProjects/sevenstones/sevenstones/wsgi.py changed, reloading.
+/Users/iantibble/PycharmProjects/sevenstones/www/mailer.py changed, reloading.
+{
+  "contact": {
+    "name": "ahole",
+    "email": "itibble@gmail.com",
+    "message": "test 2",
+    "ip": "127.0.0.1"
+  },
+  "event": "Successfully sent notification email, contact form mail received",
+  "level": "info",
+  "file_name": "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/structlog/_log_levels.py",
+  "line_number": 118,
+  "function_name": "meth",
+  "timestamp": "datetime.datetime(2021, 4, 27, 20, 43, 57, 614077, tzinfo=<UTC>)"
+}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/pymysql/connections.py", line 613, in connect
+    sock = socket.create_connection(
+  File "/usr/local/Cellar/python@3.9/3.9.4/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 843, in create_connection
+    raise err
+  File "/usr/local/Cellar/python@3.9/3.9.4/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 831, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/iantibble/PycharmProjects/sevenstones/www/views.py", line 15, in index
+    blog_post_dict = blog_text_grab()
+  File "/Users/iantibble/PycharmProjects/sevenstones/www/blog_grab.py", line 11, in blog_text_grab
+    con = pymysql.connect(host=os.getenv("dbHOST"),
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/pymysql/connections.py", line 353, in __init__
+    self.connect()
+  File "/Users/iantibble/PycharmProjects/sevenstones/venv/lib/python3.9/site-packages/pymysql/connections.py", line 664, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'bionic' (timed out)")
+/Users/iantibble/PycharmProjects/sevenstones/sevenstones/settings.py changed, reloading.
+/Users/iantibble/PycharmProjects/sevenstones/templates/admin changed, reloading.

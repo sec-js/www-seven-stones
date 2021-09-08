@@ -1,0 +1,79 @@
+{% extends "admin/base_site.html" %}
+
+
+ {% block branding %}{% endblock %}
+
+{% load static %}
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/service-definition.css" %}" />
+{% endblock extrastyle %}
+
+{% block content %}
+
+
+    <div class="right-panel">
+    <div style="border-top:thin #5a6268 solid; height: 10px"></div>
+    <h1>Netdelta - Service Definition</h1>
+    <div style="height: 20px"></div>
+    <h2>Service Overview</h2>
+    <p>Networks, as a business requirement, expose services to untrusted networks, such as the public Internet.</p>
+        <p>These services form the "face" of the organisation from an electronic networking viewpoint. Organisation's
+            typically use a firewall to restrict visitors' access to only the services as required by the business.</p>
+        <p>Lots of organisations, either through lack of skills or experience, or as a result of a lack of change control, can
+        inadvertently expose services that are not intended to be exposed. This can have dire financial consequences for the organisation.
+        </p>
+        <p>Unplanned service exposure comes from several possible sources: Shadow IT, unauthorised changes, poor firewall
+        management, or rogue devices. Unauthorised service exposure can also come from hacker "shells" - where a service has been
+        exploited successfully by an attacker, resulting in the exposure of a command shell.</p>
+        <p></p>
+        <p>Netdelta allows users to configure groups of target network addresses and then schedule periodic scanning jobs to run against
+        against the target groups. If a change in the network services occurs, the user is alerted by email. The Netdelta SaaS
+        portal allows the user to login and reconfigure groups, user access rights, scanning schedules, and to view past results.</p>
+        <p>With scripted solutions, such as with <a href="http://www.nmap.org">nmap</a>, there will be lots of false positives because
+        of time-outs of services or host time-outs. Netdelta tracks scanning histories in a back-end database, and analyses the scan history
+        window (the user can configure the size of this window) and reports the likelihood of a serious (non false-positive) result. So for
+        example, if a delta is flagged with a new service coming online, and the service was seen 5 scans previously, the result will be
+        represented with an amber flag, meaning a medium likelihood of being a false positive. If a service delta occurs that was never seen
+        before, it will be flagged red, and if a service delta occurs that was seen 2 scans ago, it will be flagged green.</p>
+        <div style="height: 20px"></div>
+        <h2>Data Extraction / Removal</h2>
+        <p>User data that is retained is only port scan results which can't be viewed as sensitive at all, especially as a visit
+        to Shodan.io or simply running a 20 minute scan will replicate the same information. However if a user requests an export dump of their
+        results, that can be provided at no extra cost.</p>
+        <div style="height: 20px"></div>
+        <h2>Data Storage and Processing Locations</h2>
+        <p>Netdelta is currently hosted on Linode in London, United Kingdom. There is no direct connectivity, or data storage,
+        with other locations.</p>
+        <div style="height: 20px"></div>
+        <h2>Deployment Models</h2>
+        <p>Netdelta is hosted on Linode, on what is effectively public cloud infrastructure.</p>
+        <div style="height: 20px"></div>
+        <h2>Service Models</h2>
+        <p>Netdelta is hosted currently as a Cloud Software as a Service (SaaS) application.</p>
+        <div style="height: 20px"></div>
+        <h2>Persistence Of Storage</h2>
+        <p>As stated previously, port scan data can not be seen as sensitive - however the aspect of data retention periods is
+        critical. As a standard offering, customer port scan data will be retained for 3 months, but if customers request longer
+        retention periods, that is a request that will be taken seriously.</p>
+        <div style="height: 20px"></div>
+        <h2>Utilisation Monitoring / Reporting</h2>
+        <p>Customers are not charged for network or CPU utilisation. Customers are charged by the number of targets - actually class C
+        network ranges (so by groups of 254 targets).</p>
+        <div style="height: 20px"></div>
+        <h2>Service Roadmaps</h2>
+        <p>Netdelta in its current form scans Internet perimeter ranges of network addresses, but this is only a start. The following
+        features are going to be added (with no increase in price for existing customers):</p>
+        <ul>
+            <li>Internal network scanning nodes, deployable as docker containers, raspberry pie packages, or other in forms.</li>
+            <li><a href="https://www.elastic.co/">Elasticsearch</a> integration for data mining and analytics.</li>
+            <li>Good port, bad port ... dangers scores will be attributed to ports and an overall score given for perimeter
+            health. For example, if a SMB service comes online, this will result in a sizeable hit on perimeter health.</li>
+            <li>Lists of public disclosed vulnerability for the exposed service and version.</li>
+            <li>API will be added for accessing remotely available functions.</li>
+            <li>Further vulnerability tests will be available for users. For example if a critical <a href="https://www.citrix.com/en-gb/">
+                Citrix</a> vulnerabiltiy is made public,
+            the test will be available to check if the user's target(s) is/are vulnerable.</li>
+        </ul>
+            <div style="height:30px"></div>
+    </div> <!-- end right panel div -->
+{% endblock content %}
