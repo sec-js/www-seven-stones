@@ -361,3 +361,31 @@ a:focus {
     float:right;
     margin: 0 0 0 20px;
 }
+
+.errorbox {
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    padding: 10px 12px;
+    /*margin: 0 0 10px 0;*/
+    color: #ba2121;
+    border: 1px solid #ba2121;
+    /*border-radius: 4px;*/
+    background-color: #fff;
+    background-position: 5px 12px;
+    border-bottom: none;
+}
+
+.errorlist {
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    /*padding: 10px 12px;*/
+    margin: 0 0 10px 0;
+    color: #ba2121;
+    border: 1px solid #ba2121;
+    /*border-radius: 4px;*/
+    background-color: #fff;
+    background-position: 5px 12px;
+    border-top: none;
+}

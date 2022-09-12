@@ -36,11 +36,15 @@ def index(request):
                 #html = render(request, 'admin/error.html', context)
                 html = redirect('/error')
             return html
+        else:
+            context = {'form': form, 'blog_post_dict': blog_post_dict, 'error_class': 'errornote'}
+            html = render(request, 'admin/index.html', context)
+            return html
     else:
         form = ContactForm()
 
+    print("form is {0}".format(ContactForm))
     context = {'form': ContactForm, 'blog_post_dict': blog_post_dict}
-
     # print("form errors : {0}, {1}").format(form.name.errors, form.email.errors)
     html = render(request, 'admin/index.html', context)
 

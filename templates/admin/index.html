@@ -1,7 +1,16 @@
 {% extends "admin/base_site.html" %}
 
+{% block extrahead %}
+    <script type="application/javascript">
+    window.addEventListener("load", () => {
+        if (document.querySelector('.errorlist')) {
+            document.querySelector('#contact').scrollIntoView();
+            }
+        });
+    </script>
+{% endblock %}
 
- {% block branding %}{% endblock %}
+{% block branding %}{% endblock %}
 
 {% block content %}
     {% load static %}
@@ -76,10 +85,31 @@
             <h2>Contact Us</h2>
             <div class="container-content fl" style="width:450px">
             <form id="contact_form" method="post">{% csrf_token %}
+            <script>console.log("length of errors is {{ form.errors|length }}")</script>
+            {% if form.non_field_errors %}
+            <p class="errorbox">
+                {% if form.errors|length == 1 %}Please correct the error below:
+                {% else %}Please correct the errors below:{% endif %}
+                {{ form.non_field_errors }}
+
+            </p>
+            {% endif %}
+            {% if form.errors %}
+            <p class="errorbox">
+                {% if form.errors|length == 1 %}Please correct the error below:
+                {% else %}Please correct the errors below:{% endif %}
+                {% for field in form %}
+                    {{ field.errors }}
+                {% endfor %}
+
+            </p>
+            {% endif %}
+
             <table class="gfg">
                 <tr class="row"><td class="first">Name <span class="required">*</span></td><td>{{ form.name }}</td></tr>
                 <tr><td class="first">Email <span class="required">*</span></td><td>{{ form.email }}</td></tr>
                 <tr><td class="first">Message <span class="required">*</span></td><td>{{ form.message }}</td></tr>
+                <tr><td class="first">Captcha <span class="required">*</span></td><td>{{ form.captcha }}</td></tr>
                 <tr><td></td><td><input class="button centre" style="width:345px" type="submit" value="Send Message"></td></tr>
             </table>
             </form>

@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['bionic', 'localhost', 'www.seven-stones.biz', '127.0.0.1', 'lo
 
 INSTALLED_APPS = [
     'www',
+    'captcha',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
