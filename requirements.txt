@@ -1,9 +1,9 @@
 asgiref==3.5.2
-Django==4.1.1
+Django==4.1.4
 mysqlclient==2.1.1
+Pillow==9.3.0
 PyMySQL==1.0.2
 python-dotenv==0.21.0
-pytz==2022.2.1
-sqlparse==0.4.2
-structlog==22.1.0
-django-simple-captcha==0.5.17
+pytz==2022.6
+sqlparse==0.4.3
+python-json-logger==2.0.4

@@ -12,9 +12,20 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 from dotenv import load_dotenv
+import logging
+from pythonjsonlogger import jsonlogger
+
+
+logger = logging.getLogger()
+logHandler = logging.StreamHandler()
+formatter = jsonlogger.JsonFormatter()
+logHandler.setFormatter(formatter)
+logger.addHandler(logHandler)
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VENV_DIR = "/home/iantibble/jango/stones"
+VENV_DIR = "/home/iantibble/jango/sevenstones/venv"
 
 load_dotenv((os.path.join(BASE_DIR, '.env')))
 
@@ -30,12 +41,15 @@ if debug == "True":
     DEBUG = True
 
 ALLOWED_HOSTS = ['bionic', 'localhost', 'www.seven-stones.biz', '127.0.0.1', 'local.seven-stones.biz']
-
+ADMINS = [('Ian Tibble', 'ian.tibble@seven-stones.biz')]
+LOG_DIR = BASE_DIR + "/logs"
+APP_LOG = LOG_DIR + "/seven-stones-www.json"
+DJANGO_CRASH_LOG = LOG_DIR + "/crash.log"
+DJANGO_SERVER_LOG = LOG_DIR + "/django-server.log"
 # Application definition
 
 INSTALLED_APPS = [
     'www',
-    'captcha',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -153,3 +167,71 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {asctime} {message}',
+            'style': '{',
+        },
+        'json_app': {
+            'class': 'pythonjsonlogger.jsonlogger.JsonFormatter',
+            'format': '%(asctime) %(message) %(levelname) %(name) ',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+        'json_app': {
+            'class': 'logging.handlers.WatchedFileHandler',
+            'filename': APP_LOG,
+            'formatter': 'json_app',
+        },
+        'django_server': {
+            'class': 'logging.handlers.WatchedFileHandler',
+            'filename': DJANGO_SERVER_LOG,
+            'formatter': 'verbose',
+        },
+        'django_crash': {
+            'level': 'ERROR',
+            'class': 'logging.handlers.WatchedFileHandler',
+            'filename': DJANGO_CRASH_LOG,
+            'formatter': 'verbose',
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'include_html': True,
+        }
+    },
+    'loggers': {
+        'sevenstones_app': {
+            'handlers': ['mail_admins', 'json_app'],
+            'format': 'json_app',
+            'level': 'INFO',
+        },
+        'django': {
+            'handlers': ['console'],
+            'propagate': True,
+        },
+        'django.request': {
+            'handlers': ['mail_admins', 'django_crash'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+        'django.server': {
+            'handlers': ['django_server'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    }
+}

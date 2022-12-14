@@ -1,10 +1,13 @@
 import smtplib
+import logging
 from django.core.mail import send_mail
-from www.logger import log_crunch
+from pprint import pprint
 
-app_logger = log_crunch()
+app_logger = logging.getLogger('sevenstones_app')
 
 def contactmailnotify(message_dict):
+
+    pprint(message_dict, indent=4)
 
     message = "Subject: contact received from seven stones site\n"
     message += "Contact mail received from " + str(message_dict['name']) + " (" + str(message_dict['email']) + ")\n"
@@ -21,18 +24,24 @@ def contactmailnotify(message_dict):
                   receivers,
                   fail_silently=False)
         app_logger.info("Successfully sent notification email, contact form mail received",
-                         contact=message_dict)
+                         extra={'sender_name': message_dict['name'], 'email': message_dict['email'],
+                                'sender_ip': message_dict['ip'], 'sender_message': message_dict['message']})
     except smtplib.SMTPException as err:
-        app_logger.critical("Error: unable to send notification email, contact form mail received from {0}, with error {1}"
-                            .format(message_dict['email'], err), contact=message_dict)
+        app_logger.critical("Error: unable to send notification email, contact form mail received from {0}, "
+                            "with error {1}".format(message_dict['email'], err),
+                            extra={'sender_name': message_dict['name'], 'email': message_dict['email'],
+                                   'sender_ip': message_dict['ip'], 'sender_message': message_dict['message']})
         return False
     except ConnectionRefusedError as error:
-        app_logger.critical("Error: ConnectionRefusedError - unable to send notification email, contact form mail received from {0}"
-                            "with error {1}"
-                            .format(message_dict['email'], error), contact=message_dict)
+        app_logger.critical("Error: ConnectionRefusedError - unable to send notification email, contact form mail "
+                            "received from {0} with error {1}".format(message_dict['email'], error),
+                            extra={'sender_name': message_dict['name'], 'email': message_dict['email'],
+                                   'sender_ip': message_dict['ip'], 'sender_message': message_dict['message']})
         return False
     except ConnectionError:
-        app_logger.critical("Error: Connection Error - unable to send notification email, contact form mail received from {0}".
-                            format(message_dict['email']), contact=message_dict)
+        app_logger.critical("Error: Connection Error - unable to send notification email, contact form mail "
+                            "received from {0}".format(message_dict['email']),
+                            extra={'sender_name': message_dict['name'], 'email': message_dict['email'],
+                                   'sender_ip': message_dict['ip'], 'sender_message': message_dict['message']})
         return False
     return True

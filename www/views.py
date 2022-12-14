@@ -2,11 +2,6 @@
 from www.models import ContactForm, Contacts
 from django.shortcuts import render
 from www.mailer import contactmailnotify
-from django.template import RequestContext
-from django.template import Context, loader
-from pprint import pprint
-from django.http import HttpResponse
-import json
 from django.shortcuts import redirect
 from www.blog_grab import blog_text_grab
 
@@ -27,13 +22,11 @@ def index(request):
             u['ip'] = ip
             p = Contacts(name=u['name'], email=u['email'], message=u['message'], ip_address=ip)
             p.save()
-            context = {}
             x = contactmailnotify(u)
             if x:
                 #html = render(request, 'admin/thanks.html', context)
                 html = redirect('/thanks')
             else:
-                #html = render(request, 'admin/error.html', context)
                 html = redirect('/error')
             return html
         else:
@@ -43,7 +36,6 @@ def index(request):
     else:
         form = ContactForm()
 
-    print("form is {0}".format(ContactForm))
     context = {'form': ContactForm, 'blog_post_dict': blog_post_dict}
     # print("form errors : {0}, {1}").format(form.name.errors, form.email.errors)
     html = render(request, 'admin/index.html', context)

@@ -13,7 +13,6 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.http import HttpResponse
 import www.views
 from django.contrib import admin
@@ -33,7 +32,6 @@ urlpatterns = [
     re_path(r'^pentest-profile/', www.views.pentest),
     re_path(r'^service-definition/', www.views.service_definition),
     re_path(r'^service-definition-plain/', www.views.service_definition_plain),
-    re_path('captcha/', include('captcha.urls')),
 ]
 
 handler404 = 'www.views.handler404'

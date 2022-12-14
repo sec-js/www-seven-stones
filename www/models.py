@@ -1,8 +1,6 @@
 from __future__ import unicode_literals
-
 from django.db import models
 from django import forms
-from captcha.fields import CaptchaField
 
 # Create your models here.
 
@@ -26,7 +24,6 @@ class ContactForm(forms.Form):
                              widget=forms.TextInput(attrs={'class': "form-control"}))
     message = forms.CharField(label='Message', max_length=600, required=True,
                               widget=forms.Textarea(attrs={'class': "form-control"}))
-    captcha = CaptchaField()
 
     def clean(self):
         cleaned_data = super(ContactForm, self).clean()

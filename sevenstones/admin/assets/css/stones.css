@@ -3,11 +3,9 @@ body {
     background-size: auto;
     background-repeat: repeat;
     background-attachment: scroll;
-    background-image: url("/static/admin/assets/img/black-grey-5.jpg");
     color: #bbb;
+    background-color: #000000;
 }
-
-
 
 body p {
     padding: 0;
